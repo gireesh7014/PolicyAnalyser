@@ -1,6 +1,6 @@
 <div align="center">
   <div style="margin: 20px 0;">
-    <img src="https://img.icons8.com/color/150/000000/artificial-intelligence.png" alt="PolicyAnalyser Logo">
+    <img src="./assets/logo.png" alt="PolicyAnalyser Logo" style="width: 50%; max-width: 400px; border-radius: 20px; box-shadow: 0 8px 32px rgba(0, 217, 255, 0.3);">
   </div>
 
   # 🚀 PolicyAnalyser – Advanced Agentic RAG for Legal Documents

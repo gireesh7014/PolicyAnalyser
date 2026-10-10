@@ -11,6 +11,7 @@ st.title("🚀 PolicyAnalyser - Free Tier Agentic RAG")
 st.markdown("Upload legal documents and chat with them using Advanced LangGraph routing, 100% free stack.")
 
 with st.sidebar:
+    st.image(os.path.join(os.path.dirname(__file__), "../assets/logo.png"), use_column_width=True)
     st.header("Document Configuration")
     document_id = st.text_input("Document ID", value="DOC_001")
     
