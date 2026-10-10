@@ -1,9 +1,9 @@
 <div align="center">
   <div style="margin: 20px 0;">
-    <img src="https://img.icons8.com/color/150/000000/artificial-intelligence.png" alt="LexReviewer Logo">
+    <img src="https://img.icons8.com/color/150/000000/artificial-intelligence.png" alt="PolicyAnalyser Logo">
   </div>
 
-  # 🚀 LexReviewer 2.0 – Advanced Agentic RAG for Legal Documents
+  # 🚀 PolicyAnalyser – Advanced Agentic RAG for Legal Documents
   
   **A 100% Free, High-Performance, Self-Correcting RAG Architecture**
 
@@ -19,9 +19,9 @@
 
 ## 📖 Overview
 
-**LexReviewer 2.0** is an enterprise-grade Legal Document Assistant designed to ingest dense legal contracts, policies, and PDFs, allowing users to "chat" with their documents. 
+**PolicyAnalyser** is an enterprise-grade Legal Document Assistant designed to ingest dense legal contracts, policies, and PDFs, allowing users to "chat" with their documents. 
 
-Unlike standard RAG pipelines that blindly retrieve and generate, LexReviewer 2.0 utilizes **Agentic RAG (CRAG - Corrective RAG)** via **LangGraph**. The AI agent actively grades its own retrieved context. If the context is irrelevant, the agent rewrites its own search query and tries again, significantly reducing hallucinations and improving precision in strict legal environments.
+Unlike standard RAG pipelines that blindly retrieve and generate, PolicyAnalyser utilizes **Agentic RAG (CRAG - Corrective RAG)** via **LangGraph**. The AI agent actively grades its own retrieved context. If the context is irrelevant, the agent rewrites its own search query and tries again, significantly reducing hallucinations and improving precision in strict legal environments.
 
 Furthermore, this architecture is meticulously designed to be **100% Free** by leveraging generous cloud free-tiers and high-performance Open Source local tooling.
 
@@ -69,7 +69,7 @@ graph TD
 ## 📁 Project Structure
 
 ```text
-LexReviewer/
+PolicyAnalyser/
 ├── agent/                  # LangGraph Agentic AI Logic
 │   ├── graph.py            # CRAG Workflow definition and state management
 │   └── retriever.py        # Qdrant + MongoDB Hybrid Retriever
@@ -145,7 +145,7 @@ Navigate to `http://localhost:8501` in your browser to start uploading PDFs and 
 
 ## 🌐 API Reference
 
-If you wish to consume the backend directly via another application (e.g., a Next.js frontend), LexReviewer 2.0 exposes the following REST endpoints:
+If you wish to consume the backend directly via another application (e.g., a Next.js frontend), PolicyAnalyser exposes the following REST endpoints:
 
 - `POST /upload-documents`
   - **Headers**: `document-id`

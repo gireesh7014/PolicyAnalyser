@@ -5,9 +5,9 @@ import os
 
 API_URL = "http://localhost:8000"
 
-st.set_page_config(page_title="LexReviewer 2.0", page_icon="🚀", layout="wide")
+st.set_page_config(page_title="PolicyAnalyser", page_icon="🚀", layout="wide")
 
-st.title("🚀 LexReviewer 2.0 - Free Tier Agentic RAG")
+st.title("🚀 PolicyAnalyser - Free Tier Agentic RAG")
 st.markdown("Upload legal documents and chat with them using Advanced LangGraph routing, 100% free stack.")
 
 with st.sidebar:

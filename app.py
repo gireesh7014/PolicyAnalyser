@@ -9,7 +9,7 @@ from ingestion.parser import PDFParser
 from ingestion.indexer import Indexer
 from agent.graph import build_agent_graph
 
-app = FastAPI(title="LexReviewer 2.0 API")
+app = FastAPI(title="PolicyAnalyser API")
 
 class DocumentUploadRequest(BaseModel):
     file: str  # Base64 encoded PDF

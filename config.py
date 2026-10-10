@@ -11,7 +11,7 @@ class Settings(BaseSettings):
 
     # Databases
     MONGODB_URL: str = "mongodb://localhost:27017"
-    MONGODB_DATABASE: str = "lexreviewer"
+    MONGODB_DATABASE: str = "policyanalyser"
     QDRANT_URL: str = "http://localhost:6333"
     QDRANT_API_KEY: Optional[str] = None
     QDRANT_COLLECTION_NAME: str = "documents"

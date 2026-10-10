@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 class AgentPromptGeneratorNode:
     def __init__(self):
         load_dotenv()
-        self.chatbot_name = os.getenv("CHATBOT_NAME", "LexReviewer")
+        self.chatbot_name = os.getenv("CHATBOT_NAME", "PolicyAnalyser")
         self.tool_config = ToolConfig()
 
     async def run(self, state: AgentState) -> AgentState:
