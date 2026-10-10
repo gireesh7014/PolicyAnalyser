@@ -12,6 +12,7 @@ class GraphState(TypedDict):
     Represents the state of our graph.
     """
     question: str
+    document_id: str
     generation: Optional[str]
     documents: List[Dict[str, Any]]
     retries: int
@@ -26,13 +27,16 @@ def get_llm():
 # --- Nodes ---
 def retrieve(state: GraphState):
     """
-    Retrieve documents from Vector Store & BM25
+    Retrieve documents from Vector Store & DocStore
     """
     question = state["question"]
-    # In a real setup, we would call our Hybrid Retriever here
-    # For now, this is a placeholder for the actual retriever call
-    documents = [{"text": "Sample retrieved contract text...", "bboxes": []}]
-    return {"documents": documents, "question": question, "retries": state.get("retries", 0)}
+    document_id = state["document_id"]
+    
+    from agent.retriever import Retriever
+    retriever = Retriever()
+    documents = retriever.retrieve(query=question, document_id=document_id)
+    
+    return {"documents": documents, "question": question, "document_id": document_id, "retries": state.get("retries", 0)}
 
 def grade_documents(state: GraphState):
     """

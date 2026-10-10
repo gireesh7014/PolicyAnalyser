@@ -6,6 +6,7 @@ from typing import List, Optional
 
 from config import settings
 from ingestion.parser import PDFParser
+from ingestion.indexer import Indexer
 from agent.graph import build_agent_graph
 
 app = FastAPI(title="LexReviewer 2.0 API")
@@ -25,8 +26,9 @@ async def upload_documents(
         parser = PDFParser()
         chunks = parser.parse_base64_pdf(request.file)
         
-        # Here we would initialize indexing to VectorDB and DocStore
-        # e.g., indexer.index(chunks, document_id)
+        # Initialize indexing to VectorDB and DocStore
+        indexer = Indexer()
+        indexer.index(chunks, document_id)
         
         return {"status": "success", "chunks_processed": len(chunks), "message": f"Document {document_id} parsed successfully."}
     except Exception as e:
@@ -40,7 +42,7 @@ async def ask_question(
     try:
         agent_app = build_agent_graph()
         # Initialize graph state
-        inputs = {"question": request.question, "retries": 0}
+        inputs = {"question": request.question, "document_id": document_id, "retries": 0}
         
         # In a real app we'd pass document_id to the retriever via configurable thread/state
         result = agent_app.invoke(inputs)
