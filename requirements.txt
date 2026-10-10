@@ -1,0 +1,17 @@
+fastapi==0.109.2
+uvicorn==0.27.1
+streamlit==1.31.1
+pymupdf==1.23.21
+qdrant-client==1.7.3
+pymongo==4.6.1
+langchain==0.1.9
+langchain-groq==0.0.1
+langchain-google-genai==0.0.9
+langchain-huggingface
+langgraph==0.0.24
+rank-bm25==0.2.2
+sentence-transformers
+python-dotenv==1.0.1
+pydantic==2.6.1
+pydantic-settings==2.2.1
+Requests==2.31.0
